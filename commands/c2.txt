@@ -1,0 +1,2 @@
+create-vm 7 pepi 24242 2
+print-vms

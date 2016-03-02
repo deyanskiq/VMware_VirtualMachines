@@ -1,0 +1,6 @@
+create-vm 5 kiko 2222 1
+add-dev 5 VIDEO_CARD 9 4000000 2
+add-dev 5 NETWORK_CARD 13 00:A0:C9:14:C8:29
+add-dev 5 HardDiskController 10 SCSI
+add-dev 5 HardDisk 3 100 10
+add-dev 5 HardDisk 2 100 10
