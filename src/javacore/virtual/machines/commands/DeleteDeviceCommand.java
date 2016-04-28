@@ -37,23 +37,6 @@ public class DeleteDeviceCommand extends Command {
 			if (ESX.getVirtualMachines().get(vmId).getDevices().containsKey(devId)) {
 				ESX.getVirtualMachines().get(vmId).getDevices().remove(devId);
 
-				// when deleting HardDiskController to delete all HardDisks
-				// attached to it
-				// int[] ids = null;
-				// int i = 0;
-				// ArrayList<HardDisk> hardDisksInfo =
-				// HardDisk.getHardDisks().get(Integer.parseInt(devId));
-				// for (HardDisk hardDisk : hardDisksInfo) {
-				// ids[i] = Integer.parseInt(hardDisk.toString().substring(10,
-				// 11));
-				// }
-				// Iterator it =
-				// VirtualMachine.this.devices.entrySet().iterator();
-				// while (it.hasNext()) {
-				// Map.Entry pair = (Map.Entry) it.next();
-				// System.out.println(pair.getKey() + " = " + pair.getValue());
-				// }
-
 				HardDiskController.getHardDiskControllers().remove(Integer.parseInt(devId));
 				HardDisk.getHardDisks().remove(Integer.parseInt(devId));
 				return true;
